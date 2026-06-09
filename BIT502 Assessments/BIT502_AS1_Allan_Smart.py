@@ -1,10 +1,8 @@
 # Import libraries
-from colorama import Fore, Style, init
 import time
 import os
 import sys
 
-init(autoreset=True)
 
 # Clear screen function
 def clear_screen():
@@ -14,11 +12,11 @@ def clear_screen():
 def main_menu():
     
     # Print differnt main menu options
-    print(Fore.BLUE + "1. Membership Plans\n")
-    print(Fore.BLUE + "2. Optional Extras\n")
-    print(Fore.BLUE + "3. Reading Challenge\n")
-    print(Fore.BLUE + "4. Aurora-Picks Rental Calculator\n")
-    print(Fore.BLUE + "5. Exit the program\n")
+    print("1. Membership Plans\n")
+    print("2. Optional Extras\n")
+    print("3. Reading Challenge\n")
+    print("4. Aurora-Picks Rental Calculator\n")
+    print("5. Exit the program\n")
 
 # Task 2: Membership plans function
 def membeship_plans():
@@ -32,19 +30,19 @@ def membeship_plans():
         print('\nWelcome to Membership Plans\n')
 
         # Print membership plans sub-menu
-        print(Fore.BLUE + "Membership plan options:\n")
-        print(Fore.BLUE + "1. Standard\n")
-        print(Fore.BLUE + "2. Premium\n")
-        print(Fore.BLUE + "3. Kids\n")
-        print(Fore.BLUE + "4. Return to main menu\n")
-        print(Fore.BLUE + "5. Exit\n")
+        print("Membership plan options:\n")
+        print("1. Standard\n")
+        print("2. Premium\n")
+        print("3. Kids\n")
+        print("4. Return to main menu\n")
+        print("5. Exit\n")
 
         membership_plan_option = 0
         try:
             
             membership_plan_option = int(input("Select option: "))
         except ValueError:
-            print(Fore.RED + "Invalid input. Please select an option from 1 - 5")
+            print("Invalid input. Please select an option from 1 - 5")
 
         match membership_plan_option:
             case 1:
@@ -94,8 +92,8 @@ def membeship_plans():
                 sys.exit()
 
             case _:
-                print(Fore.RED + '\nInvalid input. Please enter an option between 1 - 5\n')
-                input(Fore.RED + 'Press enter to try again....\n')
+                print('\nInvalid input. Please enter an option between 1 - 5\n')
+                input('Press enter to try again....\n')
 
         print('Exiting Membership Plan options\n')
         input('Press any key to conintue.....\n')
@@ -127,7 +125,7 @@ def optional_extras():
                 print('You have selected no\n')
                 break
             else:
-                print(Fore.RED + 'Invalid response. Please enter yes or no\n')
+                print('Invalid response. Please enter yes or no\n')
 
         # Private area access
         EXTRA_2_PRICE = 15
@@ -142,7 +140,7 @@ def optional_extras():
                 print('You have selected no\n')
                 break
             else:
-                print(Fore.RED + 'Invalid response. Please enter yes or no\n')
+                print('Invalid response. Please enter yes or no\n')
 
         # Monthly booklet
         EXTRA_3_PRICE = 2
@@ -157,7 +155,7 @@ def optional_extras():
                 print('You have selected no\n')
                 break
             else:
-                print(Fore.RED + 'Invalid response. Please enter yes or no\n')
+                print('Invalid response. Please enter yes or no\n')
 
         # Online ebook rental
         EXTRA_4_PRICE = 5
@@ -172,7 +170,7 @@ def optional_extras():
                 print('You have selected no\n')
                 break
             else:
-                print(Fore.RED + 'Invalid response. Please enter yes or no\n')
+                print('Invalid response. Please enter yes or no\n')
 
         # Display results
         clear_screen()
@@ -200,15 +198,15 @@ def reading_challenge():
         try:
             monday_pages_read = float(input('\nEnter the number of pages read on Monday: '))
             if monday_pages_read < 0:
-                print(Fore.RED + 'Negative numbers not allowed\n')
-                input(Fore.RED + 'Press Enter to try again....\n')
+                print('Negative numbers not allowed\n')
+                input('Press Enter to try again....\n')
                 continue
             print(f'\nYou have read {monday_pages_read} pages')
             total_pages_read += monday_pages_read
             break
         except ValueError:
-            print(Fore.RED + 'Invalid input. Please enter a numerical value\n')
-            input(Fore.RED + 'Press Enter to try again....\n')
+            print('Invalid input. Please enter a numerical value\n')
+            input('Press Enter to try again....\n')
             continue
 
     # Tueday
@@ -216,15 +214,15 @@ def reading_challenge():
         try:
             tuesday_pages_read = float(input('\nEnter the number of pages read on Tuesday: '))
             if tuesday_pages_read < 0:
-                print(Fore.RED + 'Negative numbers not allowed\n')
-                input(Fore.RED + 'Press Enter to try again....\n')
+                print('Negative numbers not allowed\n')
+                input('Press Enter to try again....\n')
                 continue
             print(f'\nYou have read {tuesday_pages_read} pages')
             total_pages_read += tuesday_pages_read
             break
         except ValueError:
-            print(Fore.RED + 'Invalid input. Please enter a numerical value\n')
-            input(Fore.RED + 'Press Enter to try again....\n')
+            print('Invalid input. Please enter a numerical value\n')
+            input('Press Enter to try again....\n')
             continue
 
     # Wednesday
@@ -232,15 +230,15 @@ def reading_challenge():
         try:
             wednesday_pages_read = float(input('\nEnter the number of pages read on Wednesday: '))
             if wednesday_pages_read < 0:
-                print(Fore.RED + 'Negative numbers not allowed\n')
-                input(Fore.RED + 'Press Enter to try again....\n')
+                print('Negative numbers not allowed\n')
+                input('Press Enter to try again....\n')
                 continue
             print(f'\nYou have read {wednesday_pages_read} pages')
             total_pages_read += wednesday_pages_read
             break
         except ValueError:
-            print(Fore.RED + 'Invalid input. Please enter a numerical value\n')
-            input(Fore.RED + 'Press Enter to try again....\n')
+            print('Invalid input. Please enter a numerical value\n')
+            input('Press Enter to try again....\n')
             continue
 
     #Thursday
@@ -248,15 +246,15 @@ def reading_challenge():
         try:
             thursday_pages_read = float(input('\nEnter the number of pages read on Thursday: '))
             if thursday_pages_read < 0:
-                print(Fore.RED + 'Negative numbers not allowed\n')
-                input(Fore.RED + 'Press Enter to try again....\n')
+                print('Negative numbers not allowed\n')
+                input('Press Enter to try again....\n')
                 continue
             print(f'You have read {thursday_pages_read} pages')
             total_pages_read += thursday_pages_read
             break
         except ValueError:
-            print(Fore.RED + 'Invalid input. Please enter a numerical value\n')
-            input(Fore.RED + 'Press Enter to try again....\n')
+            print('Invalid input. Please enter a numerical value\n')
+            input('Press Enter to try again....\n')
             continue
 
     # Friday
@@ -264,15 +262,15 @@ def reading_challenge():
         try:
             friday_pages_read = float(input('\nEnter the number of pages read on Friday: '))
             if friday_pages_read < 0:
-                print(Fore.RED + 'Negative numbers not allowed\n')
-                input(Fore.RED + 'Press Enter to try again....\n')
+                print('Negative numbers not allowed\n')
+                input('Press Enter to try again....\n')
                 continue
             print(f'You have read {friday_pages_read} pages')
             total_pages_read += friday_pages_read
             break
         except ValueError:
-            print(Fore.RED + 'Invalid input. Please enter a numerical value\n')
-            input(Fore.RED + 'Press Enter to try again....\n')
+            print('Invalid input. Please enter a numerical value\n')
+            input('Press Enter to try again....\n')
             continue
 
 
@@ -328,8 +326,8 @@ def rental_calculator():
         try:
             aurora_rental_option = int(input('Please select option 1 or 2: '))
         except ValueError:
-            print(Fore.RED + 'Invalid input. Please enter a numerical value\n')
-            input(Fore.RED + 'Press Enter to try again....\n')
+            print('Invalid input. Please enter a numerical value\n')
+            input('Press Enter to try again....\n')
             continue
 
         match aurora_rental_option:
@@ -340,16 +338,16 @@ def rental_calculator():
                     try:
                         number_of_rental_days = int(input('Enter the number of rental days: '))
                         if number_of_rental_days < 3:
-                            print(Fore.RED + 'Number of rental days, must be at least three days\n')
-                            input(Fore.RED + 'Press Enter to try again....')
+                            print('Number of rental days, must be at least three days\n')
+                            input('Press Enter to try again....')
                             continue
                         if number_of_rental_days > 21:
-                            print(Fore.RED + 'Maximum rental period is 21 days.')
-                            input(Fore.RED + 'Press Enter to try again....')
+                            print('Maximum rental period is 21 days.')
+                            input('Press Enter to try again....')
                             continue
                     except ValueError:
-                        print(Fore.RED + 'Invalid input. Must enter a number\n')
-                        input(Fore.RED + 'Press Enter to try again')
+                        print('Invalid input. Must enter a number\n')
+                        input('Press Enter to try again')
                     
                     COST_PER_DAY = 1
                     COST_AFTER_3_DAYS = 0.80
@@ -373,8 +371,8 @@ def rental_calculator():
                 time.sleep(1)
                 return
             case _:
-                print(Fore.RED + '\nInvalid input. Please enter either option 1 - 2\n')
-                input(Fore.RED + 'Please Enter to try again....')
+                print('\nInvalid input. Please enter either option 1 - 2\n')
+                input('Please Enter to try again....')
 
         
 # Main function
@@ -382,7 +380,7 @@ def main():
 
     # Opening message
     clear_screen()
-    print(Fore.GREEN + Style.BRIGHT + "Welcome to Aurora Archive")  
+    print("\nWelcome to Aurora Archive")  
     input('\nPress Enter to open the Main Menu...')
 
 
@@ -398,8 +396,8 @@ def main():
         try:
             main_menu_choice = int(input("Please select an option from 1 - 5: "))
         except ValueError:
-            print(Fore.RED + "Invalid input. Please select an option from 1 - 5\n")
-            input(Fore.RED + 'Press Enter to try again...\n')
+            print("Invalid input. Please select an option from 1 - 5\n")
+            input('Press Enter to try again...\n')
             continue
         
         # Matching case to choice
@@ -428,8 +426,8 @@ def main():
                 sys.exit()
 
             case _:
-                print(Fore.RED + 'Invalid input. Please enter an option between 1 - 5')
-                input(Fore.RED + 'Press enter to try again....')
+                print('Invalid input. Please enter an option between 1 - 5')
+                input('Press enter to try again....')
 
 
 # Executing main function
